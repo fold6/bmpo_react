@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/bmpo_react/static/css/main.f2ae9541.css",
+    "main.js": "/bmpo_react/static/js/main.426479aa.js",
+    "static/media/01_poster.png": "/bmpo_react/static/media/01_poster.77740ed6fe78957d5a82.png",
+    "index.html": "/bmpo_react/index.html",
+    "main.f2ae9541.css.map": "/bmpo_react/static/css/main.f2ae9541.css.map",
+    "main.426479aa.js.map": "/bmpo_react/static/js/main.426479aa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f2ae9541.css",
+    "static/js/main.426479aa.js"
+  ]
+}
