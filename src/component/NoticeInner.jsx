@@ -46,7 +46,6 @@ function NoticeInner() {
               <p className={styles.intext}>
                 {firstItem.text}
               </p>
-
         
               {firstItem.video1 && (
                 <div className={styles.video_wrap}>
