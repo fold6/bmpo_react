@@ -9,7 +9,8 @@
 import React from 'react';
 import './App.css';
 
-import { Route } from 'react-router-dom';
+// import { Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // 변경된 부분
 import { BmpoProvider } from './BmpoContext';
 import { BmpoProvider2 } from './BmpoContext2';
 
