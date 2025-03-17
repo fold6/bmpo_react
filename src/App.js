@@ -7,8 +7,9 @@
 // yarn add react-calendar
 
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // 변경된 부분
+import './App.css';
 
+import { Route } from 'react-router-dom';
 import { BmpoProvider } from './BmpoContext';
 import { BmpoProvider2 } from './BmpoContext2';
 
@@ -30,35 +31,45 @@ import MyBookmark from './component/MyBookmark';
 import MyReservation from './component/MyReservation';
 import Footer from './component/Footer';
 
+
 function App() {
   return (
     <BmpoProvider>
       <BmpoProvider2>
-        <Router> {/* BrowserRouter 대신 HashRouter 사용 */}
-          <div className="App">
-            <Header />
+        <div className="App">
 
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/Introduce" element={<Introduce />} />
-              <Route path="/Conductor" element={<Conductor />} />
-              <Route path="/History" element={<History />} />
-              <Route path="/Donation" element={<Donation />} />
-              <Route path="/Concert" element={<Concert />} />
-              <Route path="/Concert/:id" element={<ConcertDetail />} />
-              <Route path="/Gallery" element={<Gallery />} />
-              <Route path="/TextInner" element={<TextInner />} />
-              <Route path="/ProjectInner" element={<ProjectInner />} />
-              <Route path="/Notice" element={<Notice />} />
-              <Route path="/NoticeInner" element={<NoticeInner />} />
-              <Route path="/Login" element={<Login />} />
-              <Route path="/MyReservation" element={<MyReservation />} />
-              <Route path="/MyBookmark" element={<MyBookmark />} />
-            </Routes>
+          {/* header */}
+          <Header></Header>
 
-            <Footer />
+          {/* Route */}
+          <div>
+            <Route path='/'  exact={true} component={Home}></Route>
+            {/* 소개 */}
+            <Route path='/Introduce' component={Introduce}></Route>
+            <Route path='/Conductor' component={Conductor}></Route>
+            <Route path='/History' component={History}></Route>
+            <Route path='/Donation' component={Donation}></Route>
+            {/* 공연 */}
+            <Route path='/Concert' exact component={Concert} />
+            <Route path='/Concert/:id' component={ConcertDetail}></Route>
+            {/* 갤러리 */}
+            <Route path='/Gallery' component={Gallery}></Route>
+            <Route path='/TextInner' component={TextInner}></Route>
+            {/* 프로젝트 */}
+            <Route path='/ProjectInner' component={ProjectInner}></Route>
+            {/* 공지사항 */}
+            <Route path='/Notice' component={Notice}></Route>
+            <Route path='/NoticeInner' component={NoticeInner}></Route>
+            {/* 로그인 */}
+            <Route path='/Login' component={Login}></Route>
+            {/* 마이페이지 */}
+            <Route path='/MyReservation' component={MyReservation}></Route>
+            <Route path='/MyBookmark' component={MyBookmark}></Route>
           </div>
-        </Router>
+
+          {/* Footer */}
+          <Footer></Footer>
+        </div>
       </BmpoProvider2>
     </BmpoProvider>
   );
